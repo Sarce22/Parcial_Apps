@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de celulares</title>
+</head>
+<body>
+    <h1>Lista de celulares</h1>
+    <table>
+        <tr>
+            <th>Id_celular</th>
+            <th>Nombre</th>
+            <th>Marca</th>
+            <th>Año</th>
+            <th>Ram</th>
+            <th>Procesador</th>
+            <th>desccripcion</th>
+
+            
+        </tr>
+        
+        <tr th:each="celulares : ${celulares}">
+            <td th:text="${celulares.id_celular}"></td>
+            <td th:text="${celulares.nombre}"></td>
+            <td th:text="${celulares.marca}"></td>
+            <td th:text="${celulares.anio}"></td>
+            <td th:text="${celulares.ram}"></td>
+            <td th:text="${celulares.procesador}"></td>
+            <td th:text="${celulares.desccripcion}"></td>
+        </tr>
+    </table>
+</body>
+</html>
